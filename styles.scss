@@ -1,0 +1,103 @@
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue:hsl(227, 10%, 46%);
+$dark-gray: hsl(0, 0%, 59%);
+
+html{
+    box-sizing: border-box;
+}
+.background{
+    background-color: $dark-cyan;
+    height: 100vh;
+    width:90%;
+    margin: auto;
+    background-image:url('./images/bg-pattern-top.svg'), url('./images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat no-repeat;
+    background-size: 32rem 32rem, 32rem 32rem;
+    background-position: top -200px left -100px, bottom -200px right -100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-family: sans-serif;
+    
+}
+.card-container{
+    width: 40%;
+    max-width:600px;
+    min-width:min-content;
+    height: 60%;
+    max-height:500px;
+    border-radius: 12px;
+    border: none;
+    background-image:url('./images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 30%;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    place-items: center;
+    box-shadow: 0px 4px 12px 1px $very-dark-blue;
+}
+.card-profile{
+    min-width: 300px;
+    display: flex;
+    margin: 0 auto;
+    align-self: center;
+    padding-top: 32px;
+    flex-direction: column;
+    img{
+        width: 30%;
+        margin: 0 auto;
+        border: 6px solid white;
+        border-radius: 100%;
+    }
+    h2{
+        color: $very-dark-blue;
+        font-weight: 700;
+        text-align: center;
+        span{
+            color: $dark-gray;
+            font-weight: 300;
+        }
+    }
+    span{
+        text-align: center;
+        color: $dark-gray;
+        font-weight: 500;
+    }
+}
+.stats-container{
+    display: flex;
+    justify-content:center;
+    width:100%;
+    gap:24px;
+    padding: 0 auto;
+    align-self: baseline;
+    padding-top:10%;
+    border-top: 1.5px solid $dark-gray;
+    div{
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        text-align: center;
+        color: $very-dark-blue;
+        span:nth-child(1){
+            font-size: 24px;
+            font-weight: 700;
+        }
+        span:nth-child(2){
+            color:$dark-grayish-blue;
+            font-weight:500;
+        }
+    }
+
+}
+@media (min-width: 750px){
+    .background{
+        background-position: top -200px left -100px, bottom -200px right -100px;
+        background-size: 32rem 32rem, 32rem 32rem;
+    }
+}

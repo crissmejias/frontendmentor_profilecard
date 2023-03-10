@@ -1,0 +1,103 @@
+html {
+  box-sizing: border-box;
+}
+
+.background {
+  background-color: hsl(185deg, 75%, 39%);
+  height: 100vh;
+  width: 90%;
+  margin: auto;
+  background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat no-repeat;
+  background-size: 32rem 32rem, 32rem 32rem;
+  background-position: top -200px left -100px, bottom -200px right -100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  font-family: sans-serif;
+}
+
+.card-container {
+  width: 40%;
+  max-width: 600px;
+  min-width: min-content;
+  height: 60%;
+  max-height: 500px;
+  border-radius: 12px;
+  border: none;
+  background-image: url("./images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% 30%;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  place-items: center;
+  box-shadow: 0px 4px 12px 1px hsl(229deg, 23%, 23%);
+}
+
+.card-profile {
+  min-width: 300px;
+  display: flex;
+  margin: 0 auto;
+  align-self: center;
+  padding-top: 32px;
+  flex-direction: column;
+}
+.card-profile img {
+  width: 30%;
+  margin: 0 auto;
+  border: 6px solid white;
+  border-radius: 100%;
+}
+.card-profile h2 {
+  color: hsl(229deg, 23%, 23%);
+  font-weight: 700;
+  text-align: center;
+}
+.card-profile h2 span {
+  color: hsl(0deg, 0%, 59%);
+  font-weight: 300;
+}
+.card-profile span {
+  text-align: center;
+  color: hsl(0deg, 0%, 59%);
+  font-weight: 500;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 24px;
+  padding: 0 auto;
+  align-self: baseline;
+  padding-top: 10%;
+  border-top: 1.5px solid hsl(0deg, 0%, 59%);
+}
+.stats-container div {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  text-align: center;
+  color: hsl(229deg, 23%, 23%);
+}
+.stats-container div span:nth-child(1) {
+  font-size: 24px;
+  font-weight: 700;
+}
+.stats-container div span:nth-child(2) {
+  color: hsl(227deg, 10%, 46%);
+  font-weight: 500;
+}
+
+@media (min-width: 750px) {
+  .background {
+    background-position: top -200px left -100px, bottom -200px right -100px;
+    background-size: 32rem 32rem, 32rem 32rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
