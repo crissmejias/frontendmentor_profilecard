@@ -4,12 +4,11 @@ html {
 
 .background {
   background-color: hsl(185deg, 75%, 39%);
-  height: 100vh;
   width: 90%;
-  margin: auto;
+  height: 100vh;
   background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
   background-repeat: no-repeat no-repeat;
-  background-size: 32rem 32rem, 32rem 32rem;
+  background-size: 24rem 24rem, 24rem 24 rem;
   background-position: top -200px left -100px, bottom -200px right -100px;
   display: flex;
   flex-direction: column;
@@ -24,12 +23,14 @@ html {
   max-width: 600px;
   min-width: min-content;
   height: 60%;
+  margin: 24px auto;
+  min-height: 350px;
   max-height: 500px;
   border-radius: 12px;
   border: none;
   background-image: url("./images/bg-pattern-card.svg");
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: top 0px;
   background-size: 100% 30%;
   background-color: white;
   display: grid;
@@ -95,8 +96,13 @@ html {
 
 @media (min-width: 750px) {
   .background {
-    background-position: top -200px left -100px, bottom -200px right -100px;
     background-size: 32rem 32rem, 32rem 32rem;
+  }
+}
+@media (orientation: landscape) {
+  .background {
+    height: auto;
+    padding: 24px;
   }
 }
 
